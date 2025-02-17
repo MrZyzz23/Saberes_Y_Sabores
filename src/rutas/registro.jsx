@@ -40,13 +40,17 @@ const Registro = () => {
 
     return (
         <div className="contenedorRegistro">
+            <div className="imagenRegistro">
+                <img className="imagenR" src="https://www.earthshare.org/wp-content/uploads/EarthShare-8-Nonprofits-Fighting-for-Sustainable-Agriculture.jpg" alt="" />
+                <h1 className="tituloImagenRegistro">Registrate a saberes y sabores</h1>
+            </div>
             <form className="formularioRegistro" onSubmit={handleSubmit}>
-                <h2 className="tituloRegistro">REGISTRO</h2>
                 <div className="inputsRegistro">
+                <h1 className="tituloRegistro">Registro</h1>
                     <input
                         type="text"
                         placeholder="Nombre"
-                        className="inputRegistro"
+                        className="inputRegistro w-80 "
                         name="nombre"
                         value={nombre}
                         onChange={(e) => setNombre(e.target.value)}
@@ -59,10 +63,11 @@ const Registro = () => {
                         value={apellido}
                         onChange={(e) => setApellido(e.target.value)}
                     />
+
                     <input
                         type="email"
                         placeholder="Correo electrónico"
-                        className="inputRegistro"
+                        className="inputRegistro2"
                         name="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -70,7 +75,7 @@ const Registro = () => {
                     <input
                         type="password"
                         placeholder="Contraseña"
-                        className="inputRegistro"
+                        className="inputRegistro2 "
                         name="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -80,12 +85,14 @@ const Registro = () => {
                         name="rol"
                         value={rol} 
                     />
-                </div>
                 <div className="botonesRegistro">
-                    <Link to="/" className="volverRegistro">Volver</Link>
+                        <Link to="/" className="botonVolverinicio">
+                            <button type="button" className="botonRegistro botonVolverInicioR">Volver</button>
+                        </Link>
                     <button type="submit" className="botonRegistro">Crear cuenta</button>
                 </div>
                 <Link to="/inicioSesion" className="cuentaRegistro">¿ya tienes cuenta? Ingresa</Link>
+                </div>
             </form>
         </div>
     );
